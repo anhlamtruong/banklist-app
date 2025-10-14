@@ -163,6 +163,24 @@ img {
   color: #222;
 }
 
+.login__link:link,
+.login__link:visited {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.login__link--btn:link,
+.login__link--btn:visited {
+  padding: 0.8rem 2.5rem;
+  border-radius: 3rem;
+  background-color: var(--color-primary);
+  color: #222;
+}
+
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
@@ -686,3 +704,4 @@ h4 {
 .smooth-fade {
   transition: all 0.3s;
 }
+
