@@ -77,7 +77,18 @@ const account2 = {
   locale: 'en-US',
 };
 
-const accounts = [account1, account2];
+let accounts = [account1, account2];
+
+// --- Fetching the data ---
+fetch('accounts.json')
+  .then(response => response.json())
+  .then(data => {
+    accounts = data;
+    // Now that the data is loaded, you can run the functions that depend on it
+    createUsernames(accounts);
+  })
+  .catch(error => console.error('Error loading account data:', error));
+
 
 const formatMovementDate = function (date, locale) {
   ////////////////////////////////////////////////////////////
@@ -149,8 +160,7 @@ const createUsernames = function (accs) {
       .join('');
     // console.log(username);
   });
-};
-createUsernames(accounts);
+}
 
 ////////////////////////////////////////////////////////////
 // UpdateUI function
