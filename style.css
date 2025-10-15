@@ -179,6 +179,7 @@ img {
   border-radius: 3rem;
   background-color: var(--color-primary);
   color: #222;
+  text-decoration: none;
 }
 
 .nav__link--btn:hover,
@@ -704,4 +705,3 @@ h4 {
 .smooth-fade {
   transition: all 0.3s;
 }
-

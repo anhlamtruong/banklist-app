@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #444;
   background-color: #f3f3f3;
   height: 100vh;
@@ -88,7 +88,7 @@ nav {
   gap: 2rem;
 
   /* NOTE This creates the fade in/out anumation */
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 1s;
 }
 
@@ -288,4 +288,57 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+/* DEMO INFORMATION STYLES */
+#demo-info {
+  grid-column: 1 / -1; /* Spans the full width */
+  grid-row: 1 / span 4; /* Makes the container taller, spanning 4 grid rows */
+  display: flex; /* Use flexbox for better internal layout */
+  flex-direction: column; /* Stack children vertically */
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+#demo-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+#demo-info p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+#demo-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+#demo-info pre {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  font-size: 1.2rem;
+  flex-grow: 1; /* Allows this element to fill the available space */
+  min-height: 300px; /* Sets a minimum height */
+}
+
+/* HIDE MAIN APP UI BY DEFAULT */
+.balance,
+.movements,
+.summary,
+.operation,
+.logout-timer {
+  visibility: hidden;
 }
